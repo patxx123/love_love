@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หายงอนนะ 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="emoji">🥺💗</div>
+
+        <h1>หายงอนเค้านะ</h1>
+
+        <p>
+            เค้าขอโทษจริง ๆ นะ<br>
+            อย่าโกรธเค้านานเลย 🥹
+        </p>
+
+        <h2 id="text">หายงอนเค้าได้ไหม?</h2>
+
+        <div class="buttons">
+
+            <button id="yesBtn" onclick="forgive()">
+                💗 หายงอนแล้ว
+            </button>
+
+            <button id="noBtn" onclick="notYet()">
+                😤 ยังไม่หาย
+            </button>
+
+        </div>
+
+        <div id="result"></div>
+
+    </div>
+
+    <script>
+
+        let size = 1;
+
+        function notYet() {
+
+            size += 0.25;
+
+            document.getElementById("yesBtn").style.transform =
+                "scale(" + size + ")";
+
+            document.getElementById("text").innerHTML =
+                "งั้นเค้าจะง้อเพิ่มอีก 🥺💗";
+
+        }
+
+        function forgive() {
+
+            document.getElementById("result").innerHTML =
+                `
+                <div class="success">
+                    🥳💗🎉
+                    <h2>เย้! หายงอนแล้ว</h2>
+                    <p>ขอบคุณที่ให้อภัยเค้านะ 🥹</p>
+                    <strong>รักนะ 💕</strong>
+                </div>
+                `;
+
+            document.getElementById("text").innerHTML =
+                "ในที่สุดดดด! 😭💗";
+
+            document.getElementById("noBtn").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>
+
